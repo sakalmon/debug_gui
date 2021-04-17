@@ -1,0 +1,78 @@
+<!DOCTYPE HTML SYSTEM 'http://www.w3.org/TR/REC-html40/strict.dtd'>
+<html lang='en'>
+<head>
+<meta content='text/html; charset=utf-8' http-equiv='Content-Type' />
+<meta content='width=device-width, initial-scale=1.0, user-scalable=no' name='viewport' />
+<meta content='yes' name='mobile-web-app-capable' />
+<meta content='yes' name='apple-mobile-web-app-capable' />
+<title>User Login</title>
+<link href='/intellidesign.css?108' media='all' rel='stylesheet' type='text/css'></link>
+<link href='/intellidesign_main.css?102' media='all' rel='stylesheet' type='text/css'></link>
+<link href='/auto_timesheet.css?100' media='all' rel='stylesheet' type='text/css'></link>
+<link href='/cms/newdb/modules/visual_timesheet.css?100' media='all' rel='stylesheet' type='text/css'></link>
+<link href='/genericTable.css?161' media='all' rel='stylesheet' type='text/css'></link>
+<link href='/cms/_scripts/jquery/chosen/chosen.css?100' media='all' rel='stylesheet' type='text/css'></link>
+<link href='/printed.css?100' media='print' rel='stylesheet' type='text/css'></link>
+<script language='JavaScript' src='/cms/_scripts/submit_form.js?1' type='text/javascript'></script>
+<script language='JavaScript' src='/cms/newdb/_scripts/subform_interaction.js' type='text/javascript'></script>
+<script language='JavaScript' src='/cms/newdb/modules/timesheet.js?5' type='text/javascript'></script>
+<script language='JavaScript' src='/cms/_scripts/common.js' type='text/javascript'></script>
+<script language='JavaScript' src='/cms/_scripts/cookies.js' type='text/javascript'></script>
+</head>
+<script src='../_scripts/keytag_listener.js?2' type='text/javascript'></script>
+<body onload='keytag_load();'><div class='navbar_fixed'><div class='logged_in' style='white-space:nowrap;border-bottom:solid; height:20px;'><div style='white-space:nowrap;background:white;position:relative;z-index:5;float:right;font-weight:bold;font-size:1.1em;padding:3px 5px;border:2px solid gray;border-radius:6px;' class='noprint'><a onclick='setCookie("userid", 0, 0, "/cms/");setCookie("userid_pass", 0, 0, "/cms/");window.parent.location.href=window.parent.location.href;return false;' href='/login.cgi'>Log Out</a></div><div style='float:right; position:relative; z-index:5;font-weight:bold;'>Logged in as: 
+<br>16:23:03 25/05/2020</div>
+<div style='float:right;position:relative'><span id='auto_timesheet'></span>
+</div><span id='help_icon' style='visibility:hidden' onclick='open_list_from_button()' class='help_icon'><img src='/images/silk/popups/help-icon-small.png' title='View help items for this form'/><span id='help_items_number' class='numbercircle'></span></span></div>
+<div class='navbar noprint' style='height:20px; background-color:#d0d0ea'><table>
+<tr valign='top'>
+<td width='100'>
+<a href='/'>Home</a>
+</td>
+<td width='100'>
+<a href='/Registers/index.html'>Registers</a>
+</td>
+<td width='100'>
+<a href='/Quality/index.html'>Quality</a>
+</td>
+<td width='100'>
+<a href='/Human%20Resources/index.html'>People</a>
+</td>
+<td width='100'>
+<a href='/Ordering/index.html'>Ordering</a>
+</td>
+<td width='100'>
+<a href='/Production/index.html'>Production</a>
+</td>
+<td width='100'>
+<a href='/cms/pages/pages.cgi?page=44'>QMS</a>
+</td>
+</tr>
+</table>
+</div>
+</div>
+<div class='navbar_spaceholder'></div>
+<h1>User Login</h1>
+<div class='clear'></div>
+<script language='JavaScript' src='/cms/_scripts/submit_form.js?1' type='text/javascript'></script>
+<script language='JavaScript' src='/cms/_scripts/common.js' type='text/javascript'></script>
+<script language='JavaScript' src='/cms/_scripts/cookies.js' type='text/javascript'></script>
+Please enter your name (First and Last)
+<form name="blah" id="blah2" onsubmit='Login("../login_pass.cgi", "blah2"); return false;' ENCTYPE="multipart/form-data">
+<input type="hidden" name="requested_address"  value="0">
+<input name="newusername" id="newusername" size="50">
+<br />
+And your <i>database</i> password
+<input type='password' autocomplete='new-password' name="password" readonly onfocus="this.removeAttribute('readonly');">
+<a class='small command' onclick='document.getElementById("newpassword").style.display="block";'>Change Password</a><div id='newpassword' style='display:none'>Enter new password: &nbsp;&nbsp;<input autocomplete='new-password' name='newpass1' type='password' /><br />
+Repeat new password: <input autocomplete='new-password' name='newpass2' type='password' /></div><!-- newpassword -->
+<small><br/><input type=radio name="length" value="temp">Temporary
+</small><small><br/><input type=radio name="length" value="daily" checked>Set daily
+<br/><input type=radio name="length" value="forget">Set for 30 days
+</small><br/><input type='submit' value='Login'/><div class='red' id='response'></div><!-- response -->
+</form>
+<br/>
+<div style='border:2px solid maroon;background:lightgray;width:500px;'><ul><li><b>NOTE: Your database password is separate to your windows logon. You will need to set a database password as well.</b><li>Please choose a secure password.
+<li>By logging in with a username and password, you agree to take responsibility for all actions recorded against your login.<li>As such, please take care to secure any terminal that you have logged in to, locking the terminal when away from it <span class='nowrap'>(<i>Ctrl-Alt-Del, Lock this Computer</i>)</span>.<li>Your screensaver can be set to lock the computer after a timeout. Please see Sam if you need help with this.<li>When logging into a shared computer, please remember to log out before leaving the computer.</ul></div>
+</body>
+</html>

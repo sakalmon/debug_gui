@@ -1,0 +1,3 @@
+Fix overlays not enabled when P1/P2 is entered
+Add BOM button
+Add Open all button

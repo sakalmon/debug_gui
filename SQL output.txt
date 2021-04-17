@@ -1,0 +1,3 @@
+C:\Users\Sakal Mon>C:\Python38\python.exe "C:\Users\Sakal Mon\Documents\Git\repo\debug_gui\debug2_gui.py"
+Query successful.
+(31476,)

@@ -1,0 +1,4 @@
+SELECT component_ID 
+FROM new_PCB_BOM
+WHERE code = '30523e' 
+AND designator = 'PCB'
