@@ -99,7 +99,7 @@ class Ui_MainWindow(object):
             print("Creating query from entered BOM and revision...")
             query = f"SELECT component_ID FROM new_PCB_BOM WHERE code = '{self.bom}{self.rev}' AND designator REGEXP '^PCB'"
             print("Connecting to MySQL server...")
-            connection = mysql.connector.connect(host="midgard", user="userconnect", password="", database="cms")
+            connection = mysql.connector.connect(host="host", user="user", password="password", database="cms")
             cursor = connection.cursor()
             print("Connected to server")
             print("Executing query...")
